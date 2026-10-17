@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@600&display=swap');
+
+/* Hero Section Layout */
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+/* Left Column: Text */
+.hero-content {
+  flex: 1;
+  max-width: 500px;
+  text-align: left;
+}
+
+.hero-content h1 {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 3.5rem;
+  margin-bottom: 15px;
+  margin-top: 0;
+}
+
+.role {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  margin-top: 0;
+}
+
+.status {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 25px;
+  margin-top: 0;
+}
+
+.description {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 35px;
+}
+
+/* Button Container */
+.social-button-flex {
+  display: flex;
+  gap: 30px; /* Spaces buttons evenly without pushing the first one off the edge */
+  margin-top: 10px;
+}
+
+/* Shared Button Styles */
+.contact-btn,
+.linkedin-btn,
+.github-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: transparent;
+  color: #222;
+  border: none;
+  padding: 0px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  font-family: 'Libre Franklin', sans-serif;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* Add a subtle hover effect since they are transparent */
+.contact-btn:hover,
+.linkedin-btn:hover,
+.github-btn:hover {
+  text-decoration: underline;
+}
+
+/* Right Column: Image */
+.hero-image-container {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end; /* Pushes the circle to the right side */
+  transform: translateX(-100px);
+}
+
+.profile-circle {
+  width: 320px;
+  height: 320px;
+  background-color: #fcd34d;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+}

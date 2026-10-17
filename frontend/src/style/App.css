@@ -22,6 +22,7 @@ body {
 .my-portfolio-text {
     font-family: 'Libre Franklin', sans-serif;
     font-size: 2rem;
+    font-weight: 600;
 }
 
 .section-divider {
@@ -30,4 +31,28 @@ body {
     margin-top: 40px; /* Space between the hero content and the line */
     margin-bottom: 40px; /* Space between the line and the next section */
     width: 100%;
+}
+
+/* Starts hidden and pushed down by 40px */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  will-change: opacity, transform; 
+}
+
+/* Snaps to full visibility and original position when the class is added */
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: translateY(0); 
+}
+
+/* Footer Styles */
+.footer {
+  text-align: center;
+  margin-top: 80px; 
+  padding: 20px 0;
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 0.85rem;
+  color: #666;
 }

@@ -93,3 +93,37 @@
   border-radius: 50%;
   box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
 }
+
+/* Scroll Prompt Container */
+.scroll-prompt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 150px; /* Pushes it down below the text and image */
+  font-family: 'Libre Franklin', sans-serif;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.scroll-prompt:hover {
+  transform: scale(1.05); /* Increases the overall size by 5% */
+}
+
+.scroll-prompt p {
+  margin: 0 0 8px 0;
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.down-arrow {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+/* Hides the prompt when scrolled */
+.scroll-prompt.hidden {
+  opacity: 0 !important; 
+  pointer-events: none; /* Prevents the user from accidentally clicking it while it's invisible */
+}

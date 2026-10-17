@@ -5,7 +5,7 @@ import Projects from './Projects';
 import Skills from './Skills';
 
 export default function PortfolioSection() {
-  const [activeTab, setActiveTab] = useState('experience');
+  const [activeTab, setActiveTab] = useState('education');
 
   return (
     <div className="vertical-tab-layout">
@@ -39,20 +39,13 @@ export default function PortfolioSection() {
 
       {/* Content Panel: Displaying depending on which tab is active */}
       <main className="tab-content">
-        {activeTab === 'education' && (
-            <Education />
-        )}
-        {activeTab === 'experience' && (
-            <Experience />
-        )}
-
-        {activeTab === 'projects' && (
-            <Projects />
-        )}
-
-        {activeTab === 'skills' && (
-            <Skills />
-        )}
+        {/* The key prop forces the animation to re-trigger on every tab change */}
+        <div className="tab-fade-wrapper" key={activeTab}>
+          {activeTab === 'education' && <Education />}
+          {activeTab === 'experience' && <Experience />}
+          {activeTab === 'projects' && <Projects />}
+          {activeTab === 'skills' && <Skills />}
+        </div>
       </main>
     </div>
   );

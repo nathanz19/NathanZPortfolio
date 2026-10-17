@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;600&display=swap');
+
+/* Education Section Layout */
+.education-tab-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px; 
+}
+
+/* Top: Info and Logo */
+.education-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+/* Override inherited fonts for the top headers */
+.education-info h3,
+.education-info .org,
+.education-info .dates {
+  font-family: 'Libre Franklin', sans-serif;
+}
+
+.education-info h3 {
+    font-size: 2rem;
+}
+
+.education-info .org {
+    font-size: 1rem;
+}
+
+.education-info .dates {
+    font-size: 1rem;
+}
+
+.education-info {
+  flex: 1;
+}
+
+.education-details {
+  margin-top: 30px;
+}
+
+/* Changed to target the entire tab so "Favorite Highlights:" is styled correctly */
+.education-tab-content .edu-heading {
+  font-family: 'Libre Franklin', sans-serif;
+  font-weight: 600; 
+  font-size: 1.2rem;
+  margin-top: 16px;
+  margin-bottom: 4px;
+  color: #111;
+}
+
+.education-tab-content .edu-leadership {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-top: 0;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+/* Logo Box */
+.education-logo-container {
+  width: 150px; 
+  flex-shrink: 0;
+}
+
+.school-logo {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  background-color: transparent;
+}

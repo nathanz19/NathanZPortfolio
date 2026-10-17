@@ -55,56 +55,21 @@
     background-color: transparent;
 }
 
-/* Content Element Sizing and Styling */
-.work-item, .project-item, .skill-category {
-    margin-bottom: 30px;
+/* Tab Transition Wrapper */
+.tab-fade-wrapper {
+  width: 100%;
+  animation: tabFadeIn 0.8s ease-out forwards;
+  will-change: opacity, transform; 
 }
 
-.work-item:last-child, 
-.project-item:last-child, 
-.skill-category:last-child {
-    margin-bottom: 0; /* Clear out last margins */
-}
-
-/* Nested Text Styling to inherit page fonts */
-.tab-content h3 {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 1.35rem;
-    margin: 0 0 4px 0;
-    color: #111;
-}
-
-.dates {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    font-size: 0.85rem;
-    color: #666;
-}
-
-.org {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    font-size: 0.95rem;
-    font-weight: 600;
-    margin: 4px 0 10px 0;
-    color: #333;
-}
-
-.tab-content p {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 1.05rem;
-    line-height: 1.6;
-    color: #222;
-    margin: 0;
-}
-
-.tab-content ul {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 1.05rem;
-    line-height: 1.6;
-    color: #333;
-    margin: 8px 0 0 0;
-    padding-left: 20px;
-}
-
-.tab-content li {
-    margin-bottom: 8px;
+/* Keyframes for the fade-in and slide-up effect */
+@keyframes tabFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(15px); 
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); 
+  }
 }

@@ -1,7 +1,7 @@
 /* Anchors the indicator to the right side of the screen */
 .page-scroll-indicator {
   position: fixed;
-  right: 40px; /* Distance from the right edge of the browser window */
+  right: 25px; /* Distance from the right edge of the browser window */
   top: 50%; /* Pushes to the middle of the screen */
   transform: translateY(-50%); /* Perfectly centers it vertically */
   display: flex;

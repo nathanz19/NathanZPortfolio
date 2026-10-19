@@ -5,6 +5,7 @@ import './style/PortfolioSection.css';
 import './style/Education.css';
 import './style/Scroll.css';
 import './style/EducationSlideshow.css';
+import './style/Experience.css'
 import Hero from './components/Hero';
 import PortfolioSection from './components/PortfolioSection';
 import ScrollIndicator from './components/ScrollIndicator'; 
@@ -35,6 +36,8 @@ function App() {
     };
   }, []);
 
+  
+
   return (
     <div className="portfolio-container">
       <ScrollIndicator />
@@ -46,6 +49,7 @@ function App() {
         <div className="my-portfolio-text">My Portfolio</div>
         <PortfolioSection />
       </div>
+
 
       <footer className="footer">
           <p>&copy; {new Date().getFullYear()} Nathan Zheng. All rights reserved.</p>

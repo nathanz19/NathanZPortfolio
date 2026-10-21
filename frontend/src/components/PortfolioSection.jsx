@@ -2,15 +2,21 @@ import { useState } from 'react';
 import Education from './Education'
 import Experience from './Experience';
 import Projects from './Projects';
-import Skills from './Skills';
+import AboutMe from './AboutMe';
 
 export default function PortfolioSection() {
-  const [activeTab, setActiveTab] = useState('education');
+  const [activeTab, setActiveTab] = useState('aboutme');
 
   return (
     <div className="vertical-tab-layout">
       {/* Sidebar: Navigation List */}
       <nav className="tab-sidebar">
+        <button 
+          className={`tab-btn ${activeTab === 'aboutme' ? 'active' : ''}`}
+          onClick={() => setActiveTab('aboutme')}
+        >
+          About Me
+        </button>
         <button 
           className={`tab-btn ${activeTab === 'education' ? 'active' : ''}`}
           onClick={() => setActiveTab('education')}
@@ -29,12 +35,6 @@ export default function PortfolioSection() {
         >
           Projects
         </button>
-        <button 
-          className={`tab-btn ${activeTab === 'skills' ? 'active' : ''}`}
-          onClick={() => setActiveTab('skills')}
-        >
-          Skills
-        </button>
       </nav>
 
       {/* Content Panel: Displaying depending on which tab is active */}
@@ -44,7 +44,7 @@ export default function PortfolioSection() {
           {activeTab === 'education' && <Education />}
           {activeTab === 'experience' && <Experience />}
           {activeTab === 'projects' && <Projects />}
-          {activeTab === 'skills' && <Skills />}
+          {activeTab === 'aboutme' && <AboutMe />}
         </div>
       </main>
     </div>

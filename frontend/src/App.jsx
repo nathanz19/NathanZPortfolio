@@ -1,11 +1,15 @@
 import { useState, useEffect, useRef } from 'react';
+
 import './style/App.css';
 import './style/Hero.css';
 import './style/PortfolioSection.css';
 import './style/Education.css';
 import './style/Scroll.css';
 import './style/EducationSlideshow.css';
-import './style/Experience.css'
+import './style/Experience.css';
+import './style/Projects.css';
+import './style/AboutMe.css';
+
 import Hero from './components/Hero';
 import PortfolioSection from './components/PortfolioSection';
 import ScrollIndicator from './components/ScrollIndicator'; 
@@ -49,7 +53,6 @@ function App() {
         <div className="my-portfolio-text">My Portfolio</div>
         <PortfolioSection />
       </div>
-
 
       <footer className="footer">
           <p>&copy; {new Date().getFullYear()} Nathan Zheng. All rights reserved.</p>

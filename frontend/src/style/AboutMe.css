@@ -1,0 +1,68 @@
+/* About Section Layout */
+.about-tab-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-tab-content h1 {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 1.8rem;
+  margin-top: 0;
+  margin-bottom: 20px; 
+}
+
+/* Header & Flex layout */
+.about-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.about-info {
+  flex: 1;
+}
+
+/* Paragraph styling matching your Hero section */
+.about-description {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #444;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.about-details {
+  margin-top: 30px;
+}
+
+/* Identical to .edu-heading */
+.about-tab-content .about-heading {
+  font-family: 'Libre Franklin', sans-serif;
+  font-weight: 600; 
+  font-size: 1.2rem;
+  margin-top: 24px;
+  margin-bottom: 6px;
+  color: #111;
+}
+
+/* Identical to .edu-leadership */
+.about-tab-content .about-item {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.about-item strong {
+  font-weight: 600;
+  color: #111;
+}
+
+/* Gives the slideshow title a little breathing room */
+.slideshow-heading {
+  margin-top: 35px !important; 
+}

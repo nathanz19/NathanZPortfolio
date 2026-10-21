@@ -52,7 +52,7 @@ export default function Experience() {
           <AnimatedWorkItem>
               <h3>Handshake AI</h3>
               <p className="work-title">AI Data Annotator</p>
-              <span className="work-dates">December 2025 - Present</span>
+              <span className="work-dates">December 2025 - October 2026</span>
               <ul>
                 <li>Reviewed HTML, CSS, and JavaScript for website, game, and utility generation tasks.</li>
                 <li>Trained large AI models by providing high-quality text, image, and multimodal annotations to improve model accuracy.</li>
@@ -62,7 +62,7 @@ export default function Experience() {
           <AnimatedWorkItem>
               <h3>CodePath Puter</h3>
               <p className="work-title">Software Engineering Fellow</p>
-              <span className="work-dates">August 2026 – Present</span>
+              <span className="work-dates">September 2025 – December 2025</span>
               <ul>
                 <li>Utilized JavaScript, Node.js, React.js, and AI tools to debug and enhance the Puter open-source operating system app, improving performance and functionality across the frontend and backend.</li>
                 <li>Collaborated in an open-source team, including senior software engineers, met weekly to share progress, troubleshoot issues, and coordinate feature development to advance the Puter platform.</li>

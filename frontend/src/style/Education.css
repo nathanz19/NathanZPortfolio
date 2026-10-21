@@ -4,7 +4,14 @@
 .education-tab-content {
   display: flex;
   flex-direction: column;
-  gap: 40px; 
+  /* gap: 10px;  */
+}
+
+.education-tab-content h1 {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 1.8rem;
+  margin-top: 0;
+  margin-bottom: 0; 
 }
 
 /* Top: Info and Logo */
@@ -12,7 +19,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 20px;
+  gap: 40px;
 }
 
 /* Override inherited fonts for the top headers */
@@ -23,7 +30,7 @@
 }
 
 .education-info h3 {
-    font-size: 2rem;
+    font-size: 1.3rem;
 }
 
 .education-info .org {

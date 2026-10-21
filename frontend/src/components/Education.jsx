@@ -3,6 +3,7 @@ import Slideshow from './EducationSlideshow';
 export default function Education() {
     return (
         <section className="education-tab-content">
+            <h1>My Education</h1>
             <div className="education-header">
                 <div className="education-info">
                     <h3>Stony Brook University</h3>
@@ -11,6 +12,7 @@ export default function Education() {
                     
                     <div className="education-details">
                         <p className="edu-heading">Leadership:</p>
+                        <p className="edu-leadership">Starter of my Team on SBU Basketball Intramurals: 2026 - Current</p>
                         <p className="edu-leadership">Secretary of International Student Organization: 2025 - Current</p>
                         <p className="edu-leadership">Stony Brook University Tour Guide: 2024 - Current</p>
                         <p className="edu-heading">Awards:</p>

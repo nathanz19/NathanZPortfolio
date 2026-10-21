@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import profilePic from '../images/1720920278642.jpeg';
 
 export default function Hero() {
   // 1. State to track if the user has scrolled down
@@ -42,7 +43,7 @@ export default function Hero() {
           </div>
           
           <div className="hero-image-container">
-            <img className="profile-circle" src="src/images/1720920278642.jpeg" alt="Nathan Zheng" />
+            <img className="profile-circle" src={profilePic} alt="Nathan Zheng" />
           </div>
         </section>
 

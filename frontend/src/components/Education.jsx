@@ -1,4 +1,5 @@
 import Slideshow from './EducationSlideshow';
+import sbuLogo from '../images/Stony_Brook_University_seal.svg';
 
 export default function Education() {
     return (
@@ -23,7 +24,7 @@ export default function Education() {
                 </div>
                 
                 <div className="education-logo-container">
-                    <img src="/src/images/Stony_Brook_University_seal.svg" alt="Stony Brook University Logo" className="school-logo" />
+                    <img src={sbuLogo} alt="Stony Brook University Logo" className="school-logo" />
                 </div>
             </div>
             <p className="edu-heading">Favorite Highlights:</p>

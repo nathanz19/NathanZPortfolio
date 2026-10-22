@@ -1,14 +1,12 @@
 import { useState, useEffect } from 'react';
 import profilePic from '../images/1720920278642.jpeg';
+import ContactModal from './ContactModal'; // 1. Import the new modal component
 
 export default function Hero() {
-  // 1. State to track if the user has scrolled down
   const [isScrolled, setIsScrolled] = useState(false);
 
-  // 2. Listen to the scroll position
   useEffect(() => {
     const handleScroll = () => {
-      // If we scroll down more than 50 pixels, hide the button
       if (window.scrollY > 50) {
         setIsScrolled(true);
       } else {
@@ -17,8 +15,6 @@ export default function Hero() {
     };
 
     window.addEventListener('scroll', handleScroll);
-    
-    // Cleanup the event listener when leaving the page
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -38,7 +34,7 @@ export default function Hero() {
             <div className="social-button-flex">
                 <a href="https://www.linkedin.com/in/nathanzh/" className="linkedin-btn" >LinkedIn</a>
                 <a href="https://github.com/nathanz19" className="github-btn">GitHub</a>
-                <button className="contact-btn">Contact Me</button>
+                <ContactModal />
             </div>
           </div>
           
@@ -47,7 +43,6 @@ export default function Hero() {
           </div>
         </section>
 
-      {/* 3. Conditionally add the 'hidden' class based on our scroll state */}
       <div 
         className={`scroll-prompt ${isScrolled ? 'hidden' : ''}`} 
         onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}

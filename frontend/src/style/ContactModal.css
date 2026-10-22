@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@600;700&display=swap');
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  
+  /* Add this line: */
+  animation: fadeInOverlay 0.25s ease-out forwards;
+}
+
+.modal-content {
+  background: white;
+  padding: 35px;
+  border-radius: 8px;
+  width: 400px;
+  max-width: 90%;
+  position: relative;
+  color: #222;
+  font-family: 'Libre Franklin', sans-serif;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
+  animation: fadeInModal 0.3s ease-out forwards;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #666;
+  cursor: pointer;
+  font-family: 'Libre Franklin', sans-serif;
+  transition: color 0.2s ease;
+}
+
+.close-btn:hover {
+  color: #222;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input, 
+.contact-form textarea {
+  padding: 12px;
+  background: #fafafa;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: #444;
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 0.95rem;
+  transition: border-color 0.2s ease;
+}
+
+.contact-form input:focus, 
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #666;
+}
+
+.contact-form button[type="submit"] {
+  background-color: #f9eab9;
+  color: #222;
+  border: none;
+  padding: 12px;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  font-family: 'Libre Franklin', sans-serif;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin-top: 10px;
+}
+
+.contact-form button[type="submit"]:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes fadeInOverlay {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInModal {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes fadeOutOverlay {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes fadeOutModal {
+  from {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+}
+
+/* These classes are applied when isClosing becomes true */
+.modal-overlay.closing {
+  animation: fadeOutOverlay 0.25s ease-in forwards;
+}
+
+.modal-content.closing {
+  animation: fadeOutModal 0.25s ease-in forwards;
+}

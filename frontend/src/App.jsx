@@ -9,6 +9,7 @@ import './style/EducationSlideshow.css';
 import './style/Experience.css';
 import './style/Projects.css';
 import './style/AboutMe.css';
+import './style/ContactModal.css';
 
 import Hero from './components/Hero';
 import PortfolioSection from './components/PortfolioSection';

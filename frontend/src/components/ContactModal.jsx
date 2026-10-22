@@ -16,7 +16,7 @@ export default function ContactModal() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
-    formData.append("access_key", "YOUR_ACCESS_KEY_HERE");
+    formData.append("access_key", "9b5d71bb-4fb4-4889-befa-673018a8a612");
 
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",

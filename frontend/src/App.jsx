@@ -10,6 +10,7 @@ import './style/Experience.css';
 import './style/Projects.css';
 import './style/AboutMe.css';
 import './style/ContactModal.css';
+import './style/Responsive.css';
 
 import Hero from './components/Hero';
 import PortfolioSection from './components/PortfolioSection';
@@ -25,7 +26,7 @@ function App() {
         setIsVisible(entry.isIntersecting); 
       },
       { 
-        threshold: 0.20, 
+        threshold: 0.20,
         rootMargin: "0px 0px -50px 0px" 
       } 
     );

@@ -8,18 +8,19 @@ function AnimatedProjectItem({ children }) {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        setIsVisible(entry.isIntersecting);
+        setIsVisible(entry.isIntersecting && entry.intersectionRatio >= 0.2);
       },
       { threshold: 0.2, rootMargin: "0px 0px -20px 0px" }
     );
 
-    if (itemRef.current) {
-      observer.observe(itemRef.current);
+    const item = itemRef.current;
+    if (item) {
+      observer.observe(item);
     }
 
     return () => {
-      if (itemRef.current) {
-        observer.unobserve(itemRef.current);
+      if (item) {
+        observer.unobserve(item);
       }
     };
   }, []);
@@ -38,6 +39,16 @@ export default function Projects() {
     return (
         <section className="projects-tab-content">
           <h1>My Projects</h1>
+
+          <AnimatedProjectItem>
+              <h3>Reuseme</h3>
+              <p className="project-tech">TypeScript, Next.js, Gemini API, React, Redis, Zustand, PDF.js</p>
+              <span className="project-dates">October 2026 | <a href="https://github.com/nathanz19/Reuseme" target="_blank" rel="noreferrer">GitHub</a> | <a href="https://reuseme-coral.vercel.app/" target="_blank" rel="noreferrer">Link</a> </span>
+              <ul>
+                <li>Formulated a responsive resume editor with React, TypeScript, Tailwind CSS, and dnd-kit, enabling drag-and-drop organization, reusable templates, and PDF/Word exports; demonstrated at a hackathon and received positive feedback from 2 judges on its potential for real-world use.</li>
+                <li>Developed a Next.js AI backend using Gemini and PDF.js to analyze uploaded resume layouts and generate 3 bullet rewrites per request; protected shared AI quota with an Upstash Redis rate limiter enforcing 10 requests per IP per 24 hours, and used the tool to tailor my own resume.</li>
+              </ul>
+          </AnimatedProjectItem>
 
           <AnimatedProjectItem>
               <h3>AI Powered SAS Migration</h3>

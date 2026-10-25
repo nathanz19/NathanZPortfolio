@@ -8,18 +8,19 @@ function AnimatedWorkItem({ children }) {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        setIsVisible(entry.isIntersecting);
+        setIsVisible(entry.isIntersecting && entry.intersectionRatio >= 0.2);
       },
       { threshold: 0.2, rootMargin: "0px 0px -20px 0px" }
     );
 
-    if (itemRef.current) {
-      observer.observe(itemRef.current);
+    const item = itemRef.current;
+    if (item) {
+      observer.observe(item);
     }
 
     return () => {
-      if (itemRef.current) {
-        observer.unobserve(itemRef.current);
+      if (item) {
+        observer.unobserve(item);
       }
     };
   }, []);
